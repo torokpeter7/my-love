@@ -6,58 +6,65 @@ const MUSIC_SRC = 'music/music.mp3';
 
 // ===== Content lists =====
 const loveReasons = [
-  'Imádom a mosolyodat.',
-  'Szeretem, hogy mindig mellettem állsz.',
-  'Melletted önmagam lehetek.',
-  'A hangod megnyugtat.',
-  'A tekintetedben otthonra találok.',
-  'Veled még a csend is szép.',
-  'Minden napom jobb, amikor írsz.',
-  'A humortól szebb lesz a világ körülötted.',
-  'A közelséged biztonságot ad.',
-  'Szeretem, ahogy ölelsz.',
-  'Benned egyszerre van erő és gyengédség.',
-  'A türelmed különleges ajándék.',
-  'A figyelmességed mindent megédesít.',
-  'Szeretem, amikor nevetünk együtt.',
-  'A szemedben olyan fény van, amitől minden szebb.',
-  'Minden apró gesztusod számít nekem.',
-  'Te teszed különlegessé a hétköznapokat.',
-  'A veled töltött idő sosem elég.',
-  'Minden beszélgetésünk kincs.',
-  'A jelenléted felemel.',
-  'Szeretem, hogy ilyen kedves vagy.',
-  'A mosolyod fertőzően szép.',
-  'A figyelmedtől fontosnak érzem magam.',
-  'Veled bátrabb vagyok.',
-  'A közös emlékeink már most is drágák nekem.',
-  'Melletted a világ puhábbnak tűnik.',
-  'Az ölelésed a kedvenc helyem.',
-  'Szeretem az őszinteségedet.',
-  'A szíved gyönyörű.',
-  'A hangulatod azonnal magával ragad.',
-  'A gondolataid inspirálnak.',
-  'Szeretem, hogy figyelsz a részletekre.',
-  'A közös terveink miatt izgatott vagyok.',
-  'Minden pillanat veled emlékké válik.',
-  'Szeretem, hogy ennyire különleges vagy.',
-  'A szereteted gyógyít.',
-  'A te oldaladon minden egyszerűbb.',
-  'Szeretem, hogy őszintén tudok nevetni melletted.',
-  'A személyiséged ragyog.',
-  'Te vagy az, akire mindig mosollyal gondolok.',
-  'A közös csendjeink is szépek.',
-  'Melletted a szívem nyugodtabb.',
-  'Szeretem, hogy tudsz meglepetést okozni.',
-  'Az energiád magával húz.',
-  'A gyengédséged megérint.',
-  'Minden nap új okot adsz a szeretetre.',
-  'A közös jövő gondolata boldoggá tesz.',
-  'Szeretem, hogy fontos vagy nekem.',
-  'A nevetésed a kedvenc hangjaim egyike.',
-  'A jelenléted mindent szebbé tesz.',
-  'Melletted a világ szerethetőbb.',
-  'Egyszerűen te vagy az én csodám.'
+     "Imádom a mosolyodat ❤️",
+
+    "Szeretem azt, ahogy rám nézel.",
+
+    "Melletted mindig önmagam lehetek.",
+
+    "Imádom a nevetésedet.",
+
+    "Szeretem, hogy mindig meghallgatsz.",
+
+    "Boldoggá tesz, hogy mellettem vagy.",
+
+    "Szeretem a kedvességedet.",
+
+    "Imádom az öleléseidet.",
+
+    "Szeretem a hangodat.",
+
+    "Te vagy az egyik legszebb dolog az életemben.",
+
+    "Szeretem, hogy mindig számíthatok rád.",
+
+    "Imádom a közös pillanatainkat.",
+
+    "Szeretem, amikor együtt nevetünk.",
+
+    "Melletted minden nap különlegesebb.",
+
+    "Szeretem a személyiségedet.",
+
+    "Imádom az apró gesztusaidat.",
+
+    "Szeretem, hogy törődsz velem.",
+
+    "Te mindig jobb kedvre tudsz deríteni.",
+
+    "Szeretem a közös álmainkat.",
+
+    "Imádom, hogy ilyen különleges vagy.",
+
+    "Szeretem azt, ahogy boldoggá teszel.",
+
+    "Melletted otthon érzem magam.",
+
+    "Szeretem, hogy elfogadsz olyannak, amilyen vagyok.",
+
+    "Imádom a közös emlékeinket.",
+
+    "Szeretem a kis szokásaidat.",
+
+    "Te vagy az én biztonságom.",
+
+    "Szeretem, hogy mindig mosolyt csalsz az arcomra.",
+
+    "Imádom, hogy veled minden pillanat értékes.",
+
+    "Köszönöm, hogy vagy nekem.",
+
+    "A legjobban azt szeretem benned, hogy te vagy TE. ❤️"
 ];
 
 // A "src" mező az igazi fotótok elérési útja az images mappában.
