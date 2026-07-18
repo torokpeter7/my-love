@@ -64,12 +64,12 @@ const loveReasons = [
 // Ha üresen hagyod (''), a rendszer automatikusan egy díszített
 // helyőrző képet rajzol helyette, hogy addig se legyen üres a galéria.
 const galleryItems = [
-  { title: 'Első közös pillanat', subtitle: 'Cseréld le a képet az images mappában.', alt: 'Első közös emlék', src: 'images/kep1.jpg' },
-  { title: 'Mosolyok', subtitle: 'Ide jöhet a kedvenc fotótok.', alt: 'Mosolygós közös fotó', src: 'images/kep2.jpg' },
-  { title: 'Egy szép este', subtitle: 'Emlékekből épül a történetünk.', alt: 'Romantikus este', src: 'images/kep3.jpg' },
-  { title: 'Csók', subtitle: 'A legjobb hely egymás mellett.', alt: 'Ölelős fotó', src: 'images/kep4.jpg' },
-  { title: 'Közös kaland', subtitle: 'Minden út veled szebb.', alt: 'Közös kaland', src: 'images/kep5.jpg' },
-  { title: 'Szerelmes emlék', subtitle: 'Fotóhelyettesítő kártya.', alt: 'Szerelmes emlék', src: 'images/kep6.jpg' }
+  { title: 'Első közös pillanat', alt: 'Első közös emlék', src: 'images/kep1.jpg' },
+  { title: 'Mosolyok', alt: 'Mosolygós közös fotó', src: 'images/kep2.jpg' },
+  { title: 'Egy szép este', alt: 'Romantikus este', src: 'images/kep3.jpg' },
+  { title: 'Csók', alt: 'Ölelős fotó', src: 'images/kep4.jpg' },
+  { title: 'Közös kaland', alt: 'Közös kaland', src: 'images/kep5.jpg' },
+  { title: 'Szerelmes emlék', alt: 'Szerelmes emlék', src: 'images/kep6.jpg' }
 ];
 
 const timelineItems = [
@@ -328,6 +328,17 @@ function setupIntro() {
     // Start background motion once the welcome screen is gone.
     startAmbientEffects();
     runTypewriter();
+
+    // A gombnyomás "user interakciónak" számít, így itt már
+    // elindítható a zene automatikusan, a böngésző nem blokkolja.
+    const audio = $('#background-music');
+    const musicButton = $('#music-toggle');
+    audio.play()
+      .then(() => { musicButton.textContent = '❚❚ A mi dalunk'; })
+      .catch(() => {
+        // Ha mégis blokkolná a böngésző, marad a kézi gomb megoldás.
+        musicButton.textContent = '▶ A mi dalunk';
+      });
   });
 }
 
