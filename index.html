@@ -1,220 +1,161 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Egy modern, romantikus digitális emlékkönyv az első közös hónapotokhoz." />
-  <meta name="theme-color" content="#2b1036" />
-  <meta name="keywords" content="romantikus weboldal, szerelmes emlékkönyv, ajándék, első hónap" />
-  <title>Első Hónapunk ❤️ | Szerelmes Emlékkönyv</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Videó</title>
+<style>
+  :root {
+    --bg: #f4f4f5;
+    --card-bg: #ffffff;
+    --text: #18181b;
+    --muted: #71717a;
+    --accent: #2563eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b0b0d;
+      --card-bg: #18181b;
+      --text: #f4f4f5;
+      --muted: #a1a1aa;
+      --accent: #60a5fa;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b0b0d;
+    --card-bg: #18181b;
+    --text: #f4f4f5;
+    --muted: #a1a1aa;
+    --accent: #60a5fa;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px 16px 40px;
+    gap: 16px;
+  }
+
+  header {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    margin: 0 0 4px;
+    font-weight: 700;
+  }
+
+  p.subtitle {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .video-card {
+    width: 100%;
+    max-width: 900px;
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+  }
+
+  .video-wrapper video,
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    color: #d4d4d8;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .placeholder svg {
+    width: 48px;
+    height: 48px;
+    opacity: 0.6;
+  }
+
+  .placeholder p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #a1a1aa;
+    max-width: 320px;
+  }
+
+  .info {
+    max-width: 900px;
+    width: 100%;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .info code {
+    background: var(--card-bg);
+    padding: 2px 6px;
+    border-radius: 6px;
+    color: var(--accent);
+    font-size: 0.8em;
+  }
+</style>
 </head>
 <body>
-  <div class="background-stage" aria-hidden="true">
-    <div class="stars"></div>
-    <div class="glow glow-a"></div>
-    <div class="glow glow-b"></div>
-    <div class="glow glow-c"></div>
-    <div id="floating-hearts" class="floating-layer"></div>
-    <div id="floating-petals" class="floating-layer"></div>
-    <div id="sparkles" class="floating-layer"></div>
-    <div id="mouse-hearts" class="floating-layer"></div>
-  </div>
 
-  <main id="app-shell" class="app-shell is-hidden">
-    <header class="topbar">
-      <div class="brand">
-        <span class="brand-mark">♥</span>
-        <div>
-          <p class="brand-kicker">Digitális szerelmes emlékkönyv</p>
-          <h1>Boldog első hónapot</h1>
-        </div>
-      </div>
-      <nav class="topnav" aria-label="Fő navigáció">
-        <a href="#story">Történetünk</a>
-        <a href="#gallery">Képeink</a>
-        <a href="#reasons">52 ok</a>
-        <a href="#letter">Levél</a>
-      </nav>
-    </header>
+  <header>
+    <h1>Szia Kicsit</h1>
+    <p class="subtitle">Nézd meg ezt a kis vieót. Ezt neked szántam.</p>
+  </header>
 
-    <section class="hero section" id="hero">
-      <div class="hero-card glass" data-parallax>
-        <p class="eyebrow">Egy kis meglepetés csak Neked</p>
-        <h2>Boldog első hónapot ❤️</h2>
-        <h3>Drága Szerelmem!</h3>
-        <p class="typewriter" id="typewriter" aria-live="polite"></p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#story">Kezdjük ❤️</a>
-          <button class="btn btn-secondary" id="music-toggle" type="button">▶ A mi dalunk</button>
-        </div>
-      </div>
-      <div class="hero-visual" data-parallax>
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-        <div class="orb orb-three"></div>
-        <div class="heart-frame">
-          <div class="heart-heart">❤️</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section counter-section glass reveal" id="counter-section">
-      <div class="section-heading">
-        <p class="eyebrow">Együtt töltött idő</p>
-        <h2>Számláló</h2>
-      </div>
-      <div class="counter-grid" id="counter" aria-live="polite">
-        <article class="counter-card"><span id="days">0</span><small>Nap</small></article>
-        <article class="counter-card"><span id="hours">0</span><small>Óra</small></article>
-        <article class="counter-card"><span id="minutes">0</span><small>Perc</small></article>
-        <article class="counter-card"><span id="seconds">0</span><small>Másodperc</small></article>
-      </div>
-    </section>
-
-    <section class="section story-section" id="story">
-      <div class="section-heading reveal">
-        <p class="eyebrow">A történetünk</p>
-        <h2>Idővonal</h2>
-      </div>
-      <div class="timeline">
-        <article class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content glass">
-            <span class="timeline-step">1</span>
-            <h3>Megismerkedtünk</h3>
-            <p>Itt kezdődött minden, amikor két külön világ finoman összeért.</p>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content glass">
-            <span class="timeline-step">2</span>
-            <h3>Első találkozás</h3>
-            <p>Az a pillanat, amikor a mosolyod máris otthonossá tette a napot.</p>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content glass">
-            <span class="timeline-step">3</span>
-            <h3>Első randi</h3>
-            <p>Egy emlék, amihez mindig vissza lehet sétálni gondolatban.</p>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content glass">
-            <span class="timeline-step">4</span>
-            <h3>Első hónapunk</h3>
-            <p>És ez csak az eleje annak a szép történetnek, amit együtt írunk.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section gallery-section" id="gallery">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Közös képeink</p>
-        <h2>Galéria</h2>
-      </div>
-      <div class="gallery-grid" id="gallery-grid" aria-label="Fotógaléria"></div>
-    </section>
-
-    <section class="section reasons-section" id="reasons">
-      <div class="section-heading reveal">
-        <p class="eyebrow">52 dolog, amit szeretek benned</p>
-        <h2>Szívből</h2>
-      </div>
-      <p class="section-copy reveal">Kattints a kártyákra, hogy megforduljanak.</p>
-      <div class="reasons-grid" id="reasons-grid" aria-label="52 szeretetkártya"></div>
-    </section>
-
-    <section class="section letter-section" id="letter">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Szerelmes levél</p>
-        <h2>Nyisd ki a szívemet</h2>
-      </div>
-      <div class="envelope-wrap reveal">
-        <button class="envelope" id="envelope" type="button" aria-expanded="false" aria-controls="love-letter">
-          <div class="envelope-back"></div>
-          <div class="envelope-front"></div>
-          <div class="envelope-flap"></div>
-          <div class="seal">❤</div>
-        </button>
-        <article class="letter glass" id="love-letter">
-          <p class="letter-title">Drága Szerelmem...</p>
-          <div class="letter-body">
-            <p>Amikor visszagondolok erre az első hónapra, csak mosolyogni tudok. Minden apró pillanat veled – a nevetéseink, a beszélgetéseink éjszakába nyúlóan, még a csendjeink is – valami olyat adtak nekem, amit nehéz szavakba önteni.</p>
-            <p>Köszönöm, hogy önmagad vagy mellettem, hogy türelmes vagy, és hogy minden nappal közelebb hozol ahhoz, hogy jobb ember legyek.</p>
-            <p>Ez a weboldal csak egy apró töredéke annak, amit érzek irántad. A valóságban ennél sokkal, de sokkal többet érzek.</p>
-          </div>
-          <p class="letter-signature">Ölel, a szerelmed ❤️</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section final-section glass reveal" id="final">
-      <p class="eyebrow">A végére</p>
-      <h2>Szeretlek ❤️</h2>
-      <p class="final-copy">És ez még csak a kezdet...</p>
-      <div class="final-pulse"></div>
-    </section>
-  </main>
-
-  <div class="intro-screen" id="intro-screen" role="dialog" aria-modal="true" aria-label="Kezdőképernyő">
-    <div class="intro-card glass">
-      <div class="rose" aria-hidden="true">
-        <div class="rose-stem"></div>
-        <div class="rose-leaf rose-leaf-left"></div>
-        <div class="rose-leaf rose-leaf-right"></div>
-        <div class="rose-bloom">
-          <span></span><span></span><span></span>
-        </div>
-      </div>
-      <p class="intro-text">Van egy kis meglepetésem számodra...</p>
-      <button class="btn btn-primary intro-button" id="open-heart" type="button">Nyisd ki a szívemet ❤️</button>
+  <div class="video-card">
+    <div class="video-wrapper">
+            <video controls playsinline preload="metadata" poster="borito.png">
+             <source src="romatrip.mp4" type="video/mp4">
+           </video>
     </div>
   </div>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Lightbox bezárása">×</button>
-    <img id="lightbox-image" alt="Kép nagyban" />
-    <p id="lightbox-caption"></p>
-  </div>
+  <p class="info">
+    A videó lejátszásához kattints bal allul a lejátszás gombra.
+  </p>
 
-  <audio id="background-music" preload="none"></audio>
-
-  <template id="gallery-template">
-    <article class="gallery-item glass">
-      <button class="gallery-trigger" type="button">
-        <span class="gallery-overlay"></span>
-        <img alt="Közös emlék" loading="lazy" />
-        <div class="gallery-labels">
-          <span class="gallery-title"></span>
-          <span class="gallery-subtitle"></span>
-        </div>
-      </button>
-    </article>
-  </template>
-
-  <template id="reason-template">
-    <article class="reason-card">
-      <div class="reason-inner">
-        <div class="reason-face reason-front glass">
-          <span class="reason-number"></span>
-          <p>Szeretem benned</p>
-        </div>
-        <div class="reason-face reason-back glass">
-          <p></p>
-        </div>
-      </div>
-    </article>
-  </template>
-
-  <script src="script.js"></script>
 </body>
 </html>
