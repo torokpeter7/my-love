@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Közelebb</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="kartya/style.css">
+</head>
+<body>
+
+<h1>❤️ Közelebb</h1>
+<p class="tagline">Kártyajáték két embernek, akik szeretnék jobban érteni egymást.</p>
+
+<div class="decks" id="decks"></div>
+<div class="turn" id="turn"></div>
+
+<div class="stage">
+  <div class="card" id="card">
+    <div class="face front">
+      <div class="emoji" id="frontEmoji">💬</div>
+      <div class="deckname" id="frontName">Beszéljünk róla</div>
+      <div class="hint">Koppints a húzáshoz</div>
+    </div>
+    <div class="face back">
+      <div>
+        <div class="cat" id="backCat"></div>
+        <div class="qnum" id="backNum">1 / 15</div>
+      </div>
+      <div class="question" id="backText">Kérdés</div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+</div>
+
+<div class="controls">
+  <button class="btn btn-primary" id="drawBtn">Húzok egy lapot</button>
+  <button class="btn btn-ghost" id="shuffleBtn">Pakli újrakeverése</button>
+</div>
+<div class="progress" id="progress"></div>
+
+<details>
+  <summary>Játékszabályok</summary>
+  <div class="rules">
+    <p>Az elején mindketten húztok egy induló hangulatkérdést, majd felváltva húztok. Aki húz, elsőként válaszol, utána a másik is válaszol ugyanarra a kérdésre.</p>
+    <p>1. Nem kötelező válaszolni — nehéz kérdésnél lehet passzolni.<br>
+    2. Nem lehet kinevetni a másik válaszát.<br>
+    3. Ha valami rosszul esik, először ezt mondjátok: „Szeretném megérteni, hogy miért érzed ezt.”<br>
+    4. Nem az a cél, hogy kiderüljön, kinek van igaza.<br>
+    5. A játékot bármikor félbe lehet szakítani.</p>
+    <p>A végén húzzatok egy utolsó lapot: „Mi az az egy dolog, amit ettől a beszélgetéstől kezdve szeretnél másképp csinálni?” — és fogalmazzatok meg egy konkrét, közös vállalást.</p>
+  </div>
+</details>
+
+
+
+<script src="kartya/script.js"></script>
+</body>
+</html>
